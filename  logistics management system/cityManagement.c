@@ -3,7 +3,7 @@
 #include <string.h>
 #define MAX_CITIES 30
 #define MAX_LENGTH 100
-
+#define MAX_VEHICLES 3
 extern int currentCityCount;
 extern char cities[MAX_CITIES][MAX_LENGTH];
 
@@ -67,3 +67,4 @@ void removeName(char cities[MAX_CITIES][MAX_LENGTH],int *currentCityCount){
   (*currentCityCount)--;
    printf("City removed successfully.\n");
 }
+

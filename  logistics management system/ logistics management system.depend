@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1761160329 source:c:\users\asus\documents\github\logistics-management-system\ logistics management system\citymanagement.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1761160329 source:c:\users\asus\documents\github\logistics-management-system\ logistics management system\distancemanagement.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1760985941 source:c:\users\asus\documents\github\logistics-management-system\ logistics management system\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1761160329 source:c:\users\asus\documents\github\logistics-management-system\ logistics management system\calculations.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1761160366 source:c:\users\asus\documents\github\logistics-management-system\ logistics management system\deliveryrequesthandeling.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

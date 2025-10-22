@@ -3,7 +3,7 @@
 #include <string.h>
 #define MAX_CITIES 30
 #define MAX_LENGTH 100
-
+#define MAX_VEHICLES 3
 extern int currentCityCount;
 
 void AddDistances(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CITIES][MAX_LENGTH],int currentCityCount){
@@ -129,3 +129,4 @@ void interfaceDistanceManagement(){
        printf("3: View Distances.\n");
        printf("4: Exit to Main Menu.\n");
 }
+
