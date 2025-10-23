@@ -68,6 +68,15 @@ void removeName(char cities[MAX_CITIES][MAX_LENGTH],int *currentCityCount){
    printf("City removed successfully.\n");
 }
 
+void interfaceCityManagement(){
+
+   printf("\n\t-----City Management Section--------\n");
+   printf("1. Add City.\n");
+   printf("2. Rename City.\n");
+   printf("3. Remove City.\n");
+   printf("4. Return to Main Menu\n");
+}
+
 void cityManagement(){
   int userCommandCityManagement;
   char addMore = 'Y';
