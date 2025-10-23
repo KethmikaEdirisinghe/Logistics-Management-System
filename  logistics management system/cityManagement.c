@@ -68,3 +68,48 @@ void removeName(char cities[MAX_CITIES][MAX_LENGTH],int *currentCityCount){
    printf("City removed successfully.\n");
 }
 
+void cityManagement(){
+  int userCommandCityManagement;
+  char addMore = 'Y';
+
+  do{
+   interfaceCityManagement();
+   printf("Select what you want to do: ");
+   scanf("%d",&userCommandCityManagement);
+
+   switch(userCommandCityManagement){
+     case 1:{
+       printf("------------------------------------------------------------------------------\n");
+       printf("\n\t----Add cities-----\n");
+       addCities(cities,&currentCityCount);
+       printf("------------------------------------------------------------------------------\n");
+     }break;
+
+     case 2:{
+       printf("------------------------------------------------------------------------------\n");
+       printf("\n\t----Rename City ----\n");
+       renameInput(cities, currentCityCount);
+       printf("------------------------------------------------------------------------------\n");
+     }break;
+
+     case 3:{
+       printf("------------------------------------------------------------------------------\n");
+       printf("\n\t----Remove City ----\n");
+       removeName(cities, &currentCityCount);
+       printf("------------------------------------------------------------------------------\n");
+
+     }break;
+
+     case 4:{
+      printf("Return to Main Menu.\n");
+      return;
+     }break;
+
+     default:
+      printf("Invalid Option! Try again.\n");
+   }
+
+  }while(1); // until return called
+
+}
+
