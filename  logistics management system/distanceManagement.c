@@ -130,3 +130,60 @@ void interfaceDistanceManagement(){
        printf("4: Exit to Main Menu.\n");
 }
 
+
+void distanceManagement(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CITIES][MAX_LENGTH],int currentCityCount){
+  int userCommandDistanceManage;
+
+
+  do{
+
+   interfaceDistanceManagement();
+   printf("Select the option: ");
+   scanf("%d",&userCommandDistanceManage);
+   while(getchar() != '\n');
+
+   switch(userCommandDistanceManage){
+    case 1:{
+       printf("------------------------------------------------------------------------------\n");
+       printf("Add Distances\n");
+       AddDistances(distances,cities,currentCityCount);
+       printf("------------------------------------------------------------------------------\n");
+
+    }break;
+
+    case 2:{
+       printf("------------------------------------------------------------------------------\n");
+       printf("Edit Distances\n");
+       editDistances(distances,cities,currentCityCount);
+       printf("------------------------------------------------------------------------------\n");
+
+    }break;
+
+    case 3: {
+       printf("------------------------------------------------------------------------------\n");
+       displayDistance(distances,cities,currentCityCount);
+       printf("------------------------------------------------------------------------------\n");
+
+
+    }break;
+
+    case 4:{
+       printf("------------------------------------------------------------------------------\n");
+       printf("Back to main menu.\n");
+       printf("------------------------------------------------------------------------------\n");
+       return;
+
+
+    }break;
+
+    default:
+    printf("Invalid Input!!!\nPlease enter a valid input.\n");
+    break;
+
+   }
+
+
+
+  }while(1);
+
+}

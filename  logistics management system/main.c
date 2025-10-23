@@ -6,11 +6,17 @@
 #define MAX_VEHICLES 3
 
 void vehicleManagement(int vehiclesData[MAX_VEHICLES][4],int userVehicle,char vehicles[MAX_VEHICLES][10]);
+void cityManagement();
 
 int currentCityCount;
 char cities[MAX_CITIES][MAX_LENGTH];
 int userVehicle;
+int  vehiclesData[MAX_VEHICLES][4] = {
+  {1000,20,60,12},
+  {5000,40,50,6},
+  {10000,80,45,4}
 
+};
 
 
 
@@ -18,6 +24,7 @@ int main()
 {
    int userCommandMainMenu;
    vehicleManagement(vehiclesData,userVehicle,vehicles);
+   cityManagement();
 /*
   do{
 
