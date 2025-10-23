@@ -23,6 +23,14 @@ void diliveryRecords(
                   double distances[MAX_CITIES][MAX_CITIES]){
                   //double records[MAX_RECORDS][MAX_DATA]){
 
+void Calculations(int *sourseCity,int *destinationCity,double *packageWeight,double*diliveryCost,
+ double *estimatedTime,double *fuelConsumpion,double *fuelCost,double *totalCost,double *profit,
+ double *finalCost,double distance,int vehiclesData[MAX_VEHICLES][4],double distances[MAX_CITIES][MAX_CITIES]);
+
+void diliveryRequestSection(char cities[MAX_CITIES][MAX_LENGTH],int vehiclesData[MAX_VEHICLES][4],
+int *sourseCity,int *destinationCity,double *packageWeight,double records[MAX_RECORDS][MAX_DATA]);
+
+
   distance = distances[*sourseCity][*destinationCity];
   records[recordIndex][0] = (double)recordIndex;
   records[recordIndex][1] = (double)*sourseCity;
@@ -38,5 +46,6 @@ void diliveryRecords(
   records[recordIndex][11] = *finalCost;
   records[recordIndex][12] = *estimatedTime;
   recordIndex++;
+
 
  }
