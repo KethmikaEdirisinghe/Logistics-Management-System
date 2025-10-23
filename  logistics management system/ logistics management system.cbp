@@ -37,6 +37,9 @@
 		<Unit filename="cityManagement.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="deliveryRecords.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="deliveryRequestHandeling.c">
 			<Option compilerVar="CC" />
 		</Unit>

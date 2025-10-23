@@ -25,6 +25,12 @@ char vehicles[MAX_VEHICLES][10] = {"Van","Truck","Lorry"};
 
 int main()
 {
+   int sourse;
+   int destination;
+   double weight;
+   double diliveryCost,estimatedTime,fuelConsumpion,fuelCost,totalCost,profit,finalCost;
+   double diliveryRecords[MAX_RECORDS][MAX_DATA];
+
    int userCommandMainMenu;
    vehicleManagement(vehiclesData,userVehicle,vehicles);
    cityManagement();
