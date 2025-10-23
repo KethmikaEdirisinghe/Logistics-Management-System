@@ -6,12 +6,9 @@
 #define MAX_VEHICLES 3
 
 
-int  vehiclesData[MAX_VEHICLES][4] = {
-  {1000,20,60,12},
-  {5000,40,50,6},
-  {10000,80,45,4} }
+extern int  vehiclesData[MAX_VEHICLES][4];
+extern char vehicles[MAX_VEHICLES][10];
 
-char vehicles[MAX_VEHICLES][10] = {"Van","Truck","Lorry"};
 int userVehicle;
 
 void displayVehicleSet(int vehiclesData[MAX_VEHICLES][4],char vehicles[MAX_VEHICLES][10]){

@@ -6,6 +6,7 @@
 #define MAX_VEHICLES 3
 #define MAX_RECORDS 50
 #define MAX_DATA 13
+
 extern int currentCityCount;
 extern int userVehicle;
 extern char vehicles[MAX_VEHICLES][10];

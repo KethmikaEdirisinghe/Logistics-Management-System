@@ -4,8 +4,11 @@
 #define MAX_CITIES 30
 #define MAX_LENGTH 100
 #define MAX_VEHICLES 3
+#define MAX_RECORDS 50
+#define MAX_DATA 13
 
 void vehicleManagement(int vehiclesData[MAX_VEHICLES][4],int userVehicle,char vehicles[MAX_VEHICLES][10]);
+
 void cityManagement();
 
 int currentCityCount;
@@ -17,8 +20,8 @@ int  vehiclesData[MAX_VEHICLES][4] = {
   {10000,80,45,4}
 
 };
-
-
+double records[MAX_RECORDS][MAX_DATA];
+char vehicles[MAX_VEHICLES][10] = {"Van","Truck","Lorry"};
 
 int main()
 {
