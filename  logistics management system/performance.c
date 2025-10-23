@@ -53,4 +53,11 @@ void longestShortestRoutes(){
 
 }
 
+void performances(){
+   printf("\t\tReports\n\n");
+   printf("Total Diliveries Completed: %d",recordIndex);
+   printf("Total Distance Covered: %.2f",findTotal(3));
+   printf("Average Dilivery Time: %.2f",findTotal(3)/findTotal(12));
+   printf("Longest and Shortest Routes Completed:\n ");
+   longestShortestRoutes();
 
