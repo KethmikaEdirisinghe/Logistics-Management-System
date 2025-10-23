@@ -32,8 +32,9 @@ int main()
    double diliveryRecords[MAX_RECORDS][MAX_DATA];
 
    int userCommandMainMenu;
-   vehicleManagement(vehiclesData,userVehicle,vehicles);
-   cityManagement();
+   //vehicleManagement(vehiclesData,userVehicle,vehicles);
+   //cityManagement();
+
 /*
   do{
 
