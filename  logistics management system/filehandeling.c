@@ -41,3 +41,29 @@ void saveRoutesToFile(){
 
 }
 
+void loadRoutesFromFile(){
+  FILE *file = fopen("routes.txt\n","r");
+  if (file == NULL) {
+   printf("No routes.txt found — starting new.\n");
+   return;
+  }
+
+ fscanf(file,"==== CITY LIST ====\n");
+ fscanf(file,"Total Cities : %d\n\n",&currentCityCount);
+
+  int i,j;
+  for(i = 0;i<currentCityCount;i++){
+   fscanf(file,"[%*d] %[^\n]\n",cities[i]);
+ }
+  fscanf(file,"\n=== DISTANCE MATRIX(km)===\n");
+
+  for(i=0;i<currentCityCount;i++){
+
+       for(j=0;j<currentCityCount;j++){
+              fscanf(file,"%lf",&distances[i][j]);
+
+       }
+   }
+     fclose(file);
+     printf("Routes loaded from routes.txt\n");
+}

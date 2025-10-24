@@ -60,4 +60,4 @@ void performances(){
    printf("Average Dilivery Time: %.2f",findTotal(3)/findTotal(12));
    printf("Longest and Shortest Routes Completed:\n ");
    longestShortestRoutes();
-
+   g
