@@ -4,10 +4,25 @@
 #define MAX_CITIES 30
 #define MAX_LENGTH 100
 #define MAX_VEHICLES 3
+#define MAX_RECORDS 50
+#define MAX_DATA 13
 
 extern int currentCityCount;
+extern int recordIndex;
+extern int userVehicle;
+extern char cities[MAX_CITIES][MAX_LENGTH];
+extern char vehicles[MAX_VEHICLES][10];
 extern double records[MAX_RECORDS][MAX_DATA];
-void diliveryRecords(
+
+//double records[MAX_RECORDS][MAX_DATA];
+void Calculations(int *sourseCity,int *destinationCity,double *packageWeight,double*diliveryCost,
+ double *estimatedTime,double *fuelConsumpion,double *fuelCost,double *totalCost,double *profit,
+ double *finalCost,double distance,int vehiclesData[MAX_VEHICLES][4],double distances[MAX_CITIES][MAX_CITIES]);
+
+void diliveryRequestSection(char cities[MAX_CITIES][MAX_LENGTH],int vehiclesData[MAX_VEHICLES][4],
+int *sourseCity,int *destinationCity,double *packageWeight,double records[MAX_RECORDS][MAX_DATA]);
+
+void recordDilivery(
                   int *sourseCity,
                   int *destinationCity,
                   double *packageWeight,
@@ -23,15 +38,14 @@ void diliveryRecords(
                   double distances[MAX_CITIES][MAX_CITIES]){
                   //double records[MAX_RECORDS][MAX_DATA]){
 
-void Calculations(int *sourseCity,int *destinationCity,double *packageWeight,double*diliveryCost,
- double *estimatedTime,double *fuelConsumpion,double *fuelCost,double *totalCost,double *profit,
- double *finalCost,double distance,int vehiclesData[MAX_VEHICLES][4],double distances[MAX_CITIES][MAX_CITIES]);
+ //diliveryRequestSection(cities,vehiclesData,sourseCity,destinationCity,packageWeight,records);
+ distance = distances[*sourseCity-1][*destinationCity-1];
 
-void diliveryRequestSection(char cities[MAX_CITIES][MAX_LENGTH],int vehiclesData[MAX_VEHICLES][4],
-int *sourseCity,int *destinationCity,double *packageWeight,double records[MAX_RECORDS][MAX_DATA]);
+ Calculations(sourseCity,destinationCity,packageWeight,diliveryCost,estimatedTime,fuelConsumpion,fuelCost,totalCost,profit,
+              finalCost,distance,vehiclesData,distances);
 
 
-  distance = distances[*sourseCity][*destinationCity];
+  //distance = distances[*sourseCity][*destinationCity];
   records[recordIndex][0] = (double)recordIndex;
   records[recordIndex][1] = (double)*sourseCity;
   records[recordIndex][2] = (double)*destinationCity;
@@ -46,6 +60,4 @@ int *sourseCity,int *destinationCity,double *packageWeight,double records[MAX_RE
   records[recordIndex][11] = *finalCost;
   records[recordIndex][12] = *estimatedTime;
   recordIndex++;
-
-
- }
+}
