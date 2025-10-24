@@ -67,3 +67,39 @@ void loadRoutesFromFile(){
      fclose(file);
      printf("Routes loaded from routes.txt\n");
 }
+
+void saveDiliveriesToFile(){
+
+    FILE *file = fopen("deliveries.txt", "w");
+    if (file == NULL) {
+      printf("Error opening deliveries.txt for writing!\n");
+      return;
+    }
+
+    fprintf(file,"\t===DILIVERY HISTORY===\n");
+    fprintf(file,"Total Diliveries: %d\n\n",recordIndex);
+
+    int i;
+    for(i=0;i<recordIndex;i++){
+
+        fprintf(file, "-------------------------------------\n");
+        fprintf(file, "Record #%d\n", i + 1);
+        fprintf(file, "From City Index: %.0lf\n", records[i][1]);
+        fprintf(file, "To City Index: %.0lf\n", records[i][2]);
+        fprintf(file, "Distance: %.2lf km\n", records[i][3]);
+        fprintf(file, "Vehicle Type: %.0lf\n", records[i][4]);
+        fprintf(file, "Package Weight: %.2lf kg\n", records[i][5]);
+        fprintf(file, "Delivery Cost: %.2lf LKR\n", records[i][6]);
+        fprintf(file, "Fuel Consumption: %.2lf L\n", records[i][7]);
+        fprintf(file, "Fuel Cost: %.2lf LKR\n", records[i][8]);
+        fprintf(file, "Total Cost: %.2lf LKR\n", records[i][9]);
+        fprintf(file, "Profit: %.2lf LKR\n", records[i][10]);
+        fprintf(file, "Final Cost: %.2lf LKR\n", records[i][11]);
+        fprintf(file, "Estimated Time: %.2lf hrs\n", records[i][12]);
+        fprintf(file, "-------------------------------------\n");
+
+    }
+    fclose(file);
+    printf("Diliveries save to dilivery.txt;");
+
+ }
