@@ -14,6 +14,23 @@ extern char cities[MAX_CITIES][MAX_LENGTH];
 extern char vehicles[MAX_VEHICLES][10];
 extern double records[MAX_RECORDS][MAX_DATA];
 
+
+void recordDilivery(
+                  int *sourseCity,
+                  int *destinationCity,
+                  double *packageWeight,
+                  double*diliveryCost,
+                  double *estimatedTime,
+                  double *fuelConsumpion,
+                  double *fuelCost,
+                  double *totalCost,
+                  double *profit,
+                  double *finalCost,
+                  double distance,
+                  int vehiclesData[MAX_VEHICLES][4],
+                  double distances[MAX_CITIES][MAX_CITIES]);
+
+
 double findTotal(int recordColumn){
    double total= 0.0;
    int i;
@@ -25,8 +42,12 @@ double findTotal(int recordColumn){
 }
 void longestShortestRoutes(){
   int i;
-  int shortestIndex;
-  int longestIndex;
+  int shortestIndex = 0;
+  int longestIndex = 0;
+
+  if(recordIndex == 0){
+       printf("No records available yet.\n");
+  }
   double mindistance = records[0][3];
   double maxdistance = records[0][3];
 
@@ -55,9 +76,20 @@ void longestShortestRoutes(){
 
 void performances(){
    printf("\t\tReports\n\n");
-   printf("Total Diliveries Completed: %d",recordIndex);
-   printf("Total Distance Covered: %.2f",findTotal(3));
-   printf("Average Dilivery Time: %.2f",findTotal(3)/findTotal(12));
+   printf("Total Diliveries Completed: %d\n",recordIndex);
+   printf("Total Distance Covered: %.2f\n",findTotal(3));
+
+   double totalDistance = findTotal(3);
+   double totalTime = findTotal(12);
+
+
+   if(totalTime == 0){
+       printf("Average Dilivery Time: 0.00\n");
+   }
+   else{
+      printf("Average Delivery Time: %.2f\n", totalDistance / totalTime);
+   }
+   //printf("Average Dilivery Time: %.2f\n",findTotal(3)/findTotal(12));
    printf("Longest and Shortest Routes Completed:\n ");
    longestShortestRoutes();
-   g
+   }
