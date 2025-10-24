@@ -103,3 +103,37 @@ void saveDiliveriesToFile(){
     printf("Diliveries save to dilivery.txt;");
 
  }
+
+ void loadDiliveriesFromFile() {
+    FILE *file = fopen("deliveries.txt", "r");
+    if (file == NULL) {
+        printf("No deliveries.txt found — starting new.\n");
+        return;
+    }
+
+    fscanf(file, "==== DELIVERY HISTORY ====\n");
+    fscanf(file, "Total Deliveries: %d\n\n", &recordIndex);
+
+    for (int i = 0; i < recordIndex; i++) {
+
+        fscanf(file, "-------------------------------------\n");
+        fscanf(file, "Record #%*d\n");
+        fscanf(file, "From City Index: %lf\n", &records[i][1]);
+        fscanf(file, "To City Index: %lf\n", &records[i][2]);
+        fscanf(file, "Distance: %lf km\n", &records[i][3]);
+        fscanf(file, "Vehicle Type: %lf\n", &records[i][4]);
+        fscanf(file, "Package Weight: %lf kg\n", &records[i][5]);
+        fscanf(file, "Delivery Cost: %lf LKR\n", &records[i][6]);
+        fscanf(file, "Fuel Consumption: %lf L\n", &records[i][7]);
+        fscanf(file, "Fuel Cost: %lf LKR\n", &records[i][8]);
+        fscanf(file, "Total Cost: %lf LKR\n", &records[i][9]);
+        fscanf(file, "Profit: %lf LKR\n", &records[i][10]);
+        fscanf(file, "Final Cost: %lf LKR\n", &records[i][11]);
+        fscanf(file, "Estimated Time: %lf hrs\n", &records[i][12]);
+        fscanf(file, "-------------------------------------\n");
+        records[i][0] = i;
+    }
+
+    fclose(file);
+    printf("Deliveries loaded from deliveries.txt\n");
+}
