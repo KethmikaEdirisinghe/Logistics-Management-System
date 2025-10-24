@@ -4,12 +4,15 @@
 #define MAX_CITIES 30
 #define MAX_LENGTH 100
 #define MAX_VEHICLES 3
+#define MAX_RECORDS 50
+#define MAX_DATA 13
 
-
-extern int  vehiclesData[MAX_VEHICLES][4];
+extern int userVehicle;
 extern char vehicles[MAX_VEHICLES][10];
+extern int  vehiclesData[MAX_VEHICLES][4];
 
-int userVehicle;
+//char vehicles[MAX_VEHICLES][10] = {"Van","Truck","Lorry"};
+//int userVehicle;
 
 void displayVehicleSet(int vehiclesData[MAX_VEHICLES][4],char vehicles[MAX_VEHICLES][10]){
    int i,j,vehicleSelect;
@@ -24,19 +27,19 @@ void displayVehicleSet(int vehiclesData[MAX_VEHICLES][4],char vehicles[MAX_VEHIC
 
 }
 
-void selectVehicle(int vehiclesData[MAX_VEHICLES][4],char vehicles[MAX_VEHICLES][10],int userVehicle){
+void selectVehicle(int vehiclesData[MAX_VEHICLES][4],char vehicles[MAX_VEHICLES][10],int *userVehicle){
 
   printf("1-> Van\n ");
   printf("2-> Truck.\n");
   printf("3-> Lorry.\n");
   printf("Please Select your Vehicle: \n");
-  scanf("%d",&userVehicle);
+  scanf("%d",userVehicle);
 
-  if(userVehicle == 1){
+  if(*userVehicle == 1){
    printf("You have selected Van.\n");
-  }else if(userVehicle == 2){
+  }else if(*userVehicle == 2){
    printf("You have selected Truck.\n");
-  }else if(userVehicle == 3){
+  }else if(*userVehicle == 3){
    printf("You have selected Lorry.\n");
   }else{
    printf("Invalid Select!\n");
@@ -44,7 +47,7 @@ void selectVehicle(int vehiclesData[MAX_VEHICLES][4],char vehicles[MAX_VEHICLES]
    }
 }
 
-void vehicleManagement(int vehiclesData[MAX_VEHICLES][4],int userVehicle,char vehicles[MAX_VEHICLES][10]){
+void vehicleManagement(int vehiclesData[MAX_VEHICLES][4],int *userVehicle,char vehicles[MAX_VEHICLES][10]){
   printf("\n\tVehicle Management Section\n");
   displayVehicleSet(vehiclesData,vehicles);
   selectVehicle(vehiclesData,vehicles,userVehicle);
