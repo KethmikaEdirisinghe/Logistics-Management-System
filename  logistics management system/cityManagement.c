@@ -23,7 +23,7 @@ do{
    strcpy(cities[*currentCityCount],citynames);
    (*currentCityCount)++;
 
-   printf("Do you want to add another City?(y/N): ");
+   printf("Do you want to add another City?(Y/N): ");
    scanf(" %c",&addMore);
 
   }while(addMore == 'Y' || addMore == 'y');
