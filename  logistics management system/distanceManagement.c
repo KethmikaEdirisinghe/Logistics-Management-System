@@ -3,7 +3,9 @@
 #include <string.h>
 #define MAX_CITIES 30
 #define MAX_LENGTH 100
-#define MAX_VEHICLES 3
+#define MAX_RECORDS 50
+#define MAX_DATA 13
+
 extern int currentCityCount;
 
 void AddDistances(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CITIES][MAX_LENGTH],int currentCityCount){
@@ -45,7 +47,7 @@ void displayDistance(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CI
   printf("%-12s"," From\\To ");
 
   for(i=0;i<currentCityCount;i++){
-    printf("| %-10s |",cities[i]);
+    printf("| %-10s ",cities[i]);
   }
   printf("|\n");
 
@@ -53,7 +55,7 @@ void displayDistance(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CI
     printf(" %-10s |",cities[i]);
 
    for(j=0;j<currentCityCount;j++){
-    printf(" %-10.2f | ",distances[i][j]);
+    printf(" %-10.2f| ",distances[i][j]);
     }
     printf("\n");
   }
@@ -61,13 +63,18 @@ void displayDistance(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CI
 
 void displayIndex(double distances[MAX_CITIES][MAX_CITIES],int currentCityCount){
     printf("\n\tIndex Structure Of the table\n");
+    printf("     ");
     int row,col;
     for(col = 0;col<currentCityCount;col++){
-       printf(" [%d] ",col);
+       printf(" [%2d] ",col);
     }
     printf("\n");
+
+    for (int i = 0; i < 10 + currentCityCount * 9; i++) printf("-");
+    printf("\n");
+
     for(row = 0;row<currentCityCount;row++){
-       printf("[%d]",row);
+       printf("[%2d] |",row);
 
     for(col=0;col<currentCityCount;col++){
        printf(" %6.2f ",distances[row][col]);
@@ -75,6 +82,9 @@ void displayIndex(double distances[MAX_CITIES][MAX_CITIES],int currentCityCount)
 
        printf("\n");
     }
+
+    for (int i = 0; i < 10 + currentCityCount * 9; i++) printf("-");
+    printf("\n");
 
 }
 
@@ -121,24 +131,24 @@ void editDistances(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CITI
 }
 
 void interfaceDistanceManagement(){
-       printf("\t\t---Distance Management Section---\n");
+       printf("\n--------------------------------------------\n");
+       printf("\t---Distance Management Section---\n");
        printf("\n");
-       //printf("Select your option:\n");
        printf("1: Add Distances.\n");
        printf("2: Edit Distances.\n");
        printf("3: View Distances.\n");
        printf("4: Exit to Main Menu.\n");
+       printf("\n--------------------------------------------\n");
 }
 
-
-void distanceManagement(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CITIES][MAX_LENGTH],int currentCityCount){
+void distanceManagement(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX_CITIES][MAX_LENGTH]){
   int userCommandDistanceManage;
 
 
   do{
 
    interfaceDistanceManagement();
-   printf("Select the option: ");
+   printf(":->Select the option: ");
    scanf("%d",&userCommandDistanceManage);
    while(getchar() != '\n');
 
@@ -187,3 +197,4 @@ void distanceManagement(double distances[MAX_CITIES][MAX_CITIES],char cities[MAX
   }while(1);
 
 }
+

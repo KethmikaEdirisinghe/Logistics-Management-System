@@ -14,7 +14,7 @@ extern char cities[MAX_CITIES][MAX_LENGTH];
 extern char vehicles[MAX_VEHICLES][10];
 extern double records[MAX_RECORDS][MAX_DATA];
 
-//double records[MAX_RECORDS][MAX_DATA];
+
 void Calculations(int *sourseCity,int *destinationCity,double *packageWeight,double*diliveryCost,
  double *estimatedTime,double *fuelConsumpion,double *fuelCost,double *totalCost,double *profit,
  double *finalCost,double distance,int vehiclesData[MAX_VEHICLES][4],double distances[MAX_CITIES][MAX_CITIES]);
@@ -36,16 +36,16 @@ void recordDilivery(
                   double distance,
                   int vehiclesData[MAX_VEHICLES][4],
                   double distances[MAX_CITIES][MAX_CITIES]){
-                  //double records[MAX_RECORDS][MAX_DATA]){
 
- //diliveryRequestSection(cities,vehiclesData,sourseCity,destinationCity,packageWeight,records);
+
+
  distance = distances[*sourseCity-1][*destinationCity-1];
 
  Calculations(sourseCity,destinationCity,packageWeight,diliveryCost,estimatedTime,fuelConsumpion,fuelCost,totalCost,profit,
               finalCost,distance,vehiclesData,distances);
 
 
-  //distance = distances[*sourseCity][*destinationCity];
+
   records[recordIndex][0] = (double)recordIndex;
   records[recordIndex][1] = (double)*sourseCity;
   records[recordIndex][2] = (double)*destinationCity;

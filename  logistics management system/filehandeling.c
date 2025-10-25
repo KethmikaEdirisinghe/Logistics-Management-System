@@ -30,9 +30,17 @@ void saveRoutesToFile(){
    }
    fprintf(file,"\n==== DISTANCE MATRIX(km) ====\n");
 
+   fprintf(file,"From\\To");
    for(i=0;i<currentCityCount;i++){
+       fprintf(file,"%6d ",i+1);
+   }
+   fprintf(file,"\n");
+
+   for(i=0;i<currentCityCount;i++){
+       fprintf(file,"%6d ",i+1);
+
     for(j=0;j<currentCityCount;j++){
-       fprintf(file,"%-8.2lf",distances[i][j]);
+       fprintf(file,"%-6.2lf",distances[i][j]);
     }
      fprintf(file,"\n");
    }
@@ -42,9 +50,9 @@ void saveRoutesToFile(){
 }
 
 void loadRoutesFromFile(){
-  FILE *file = fopen("routes.txt\n","r");
+  FILE *file = fopen("routes.txt","r");
   if (file == NULL) {
-   printf("No routes.txt found — starting new.\n");
+   printf("No saved datain routes.txt\nStarting New.\n");
    return;
   }
 
@@ -58,7 +66,7 @@ void loadRoutesFromFile(){
   fscanf(file,"\n=== DISTANCE MATRIX(km)===\n");
 
   for(i=0;i<currentCityCount;i++){
-
+        fscanf(file,"%d");
        for(j=0;j<currentCityCount;j++){
               fscanf(file,"%lf",&distances[i][j]);
 
@@ -67,6 +75,7 @@ void loadRoutesFromFile(){
      fclose(file);
      printf("Routes loaded from routes.txt\n");
 }
+
 
 void saveDiliveriesToFile(){
 
@@ -107,7 +116,7 @@ void saveDiliveriesToFile(){
  void loadDiliveriesFromFile() {
     FILE *file = fopen("deliveries.txt", "r");
     if (file == NULL) {
-        printf("No deliveries.txt found — starting new.\n");
+        printf("No saved data in deliveires.txt\nstarting new.\n");
         return;
     }
 

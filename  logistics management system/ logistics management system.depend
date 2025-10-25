@@ -24,17 +24,19 @@
 	<stdlib.h>
 	<string.h>
 
-1761330220 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\calculations.c
+1761352377 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\calculations.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1761213488 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\citymanagement.c
+1761352331 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\citymanagement.c
+	<stdio.h>
+	<stdlib.h>
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1761329800 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\deliveryrequesthandeling.c
+1761352859 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\deliveryrequesthandeling.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -49,7 +51,7 @@
 	<stdlib.h>
 	<string.h>
 
-1761330414 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\deliveryrecords.c
+1761352721 source:c:\users\asus\onedrive\documents\github\logistics-management-system\ logistics management system\deliveryrecords.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

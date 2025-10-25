@@ -18,7 +18,6 @@ void findShortestRouteIterative(int startPoint, int endPoint) {
   int bestPathLength = 0;
   double currentDistance;
 
-    // --- Path 0: Direct Route (A -> B) ---
   if (distances[startPoint][endPoint] > 0) {
    minDistance = distances[startPoint][endPoint];
    bestPath[0] = startPoint;
@@ -26,7 +25,7 @@ void findShortestRouteIterative(int startPoint, int endPoint) {
    bestPathLength = 2;
   }
 
-    // --- Path 1: 1 Intermediate City (A -> c1 -> B) ---
+
   for (int c1 = 0; c1 < currentCityCount; c1++) {
    if (c1 == startPoint || c1 == endPoint) continue;
 

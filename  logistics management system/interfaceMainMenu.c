@@ -10,13 +10,14 @@
 
 
 void interfaceMainMenu(){
+printf("\n=================================================\n");
 printf("\n\tLOGISTIC MANAGEMENT SYSTEM\n");
-
-printf("1.Go to City management.\n");
+printf("\n");
+printf("1. Go to City management.\n");
 printf("2. Go to Distance management.\n");
 printf("3. Place a dilivery.\n");
 printf("4. Check Records.\n");
 printf("5. Exit from System.\n");
-printf("\n");
+printf("\n=================================================\n");
 
 }
