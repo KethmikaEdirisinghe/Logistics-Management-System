@@ -23,8 +23,9 @@ void Calculations(
                   double distance,
                   int vehiclesData[MAX_VEHICLES][4],
                   double distances[MAX_CITIES][MAX_CITIES]){
+
     double fuelPrice = 310.00;
-    //distance = distances[*sourseCity][*destinationCity];
+
     *diliveryCost = distance*(vehiclesData[userVehicle-1][1])*(1+(*packageWeight/10000));
     *estimatedTime = distance/vehiclesData[userVehicle-1][2];
     *fuelConsumpion = distance/vehiclesData[userVehicle-1][3];
@@ -33,4 +34,3 @@ void Calculations(
     *profit = *totalCost*0.25;
     *finalCost = *totalCost + *profit;
 }
-

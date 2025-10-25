@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #define MAX_CITIES 30
 #define MAX_LENGTH 100
 #define MAX_VEHICLES 3
+#define MAX_RECORDS 50
+#define MAX_DATA 13
+
 extern int currentCityCount;
 extern char cities[MAX_CITIES][MAX_LENGTH];
 
@@ -69,12 +74,14 @@ void removeName(char cities[MAX_CITIES][MAX_LENGTH],int *currentCityCount){
 }
 
 void interfaceCityManagement(){
-
-   printf("\n\t-----City Management Section--------\n");
+   printf("\n--------------------------------------------\n");
+   printf("\n\t-----City Management Section-----\n");
+   printf("\n");
    printf("1. Add City.\n");
    printf("2. Rename City.\n");
    printf("3. Remove City.\n");
    printf("4. Return to Main Menu\n");
+   printf("\n--------------------------------------------\n");
 }
 
 void cityManagement(){
@@ -83,7 +90,7 @@ void cityManagement(){
 
   do{
    interfaceCityManagement();
-   printf("Select what you want to do: ");
+   printf(":->Select what you want to do: ");
    scanf("%d",&userCommandCityManagement);
 
    switch(userCommandCityManagement){
@@ -111,6 +118,7 @@ void cityManagement(){
 
      case 4:{
       printf("Return to Main Menu.\n");
+      printf("\t\t+++\n");
       return;
      }break;
 
@@ -121,4 +129,3 @@ void cityManagement(){
   }while(1); // until return called
 
 }
-
