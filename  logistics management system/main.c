@@ -97,18 +97,12 @@ int main()
   loadRoutesFromFile();
   loadDiliveriesFromFile();
 
-
-  //vehicleManagement(vehiclesData,userVehicle);
-  //distanceManagement(distances,cities,currentCityCount);
-
-  // diliveryRequestSection(cities,vehiclesData,&sourse,&destination,&weight,diliveryRecords);
-  //Calculations(&sourse,&destination,&weight,&diliveryCost,&estimatedTime,&fuelConsumpion,&fuelCost,&totalCost,&profit,&finalCost,distance,vehiclesData,distances);
   int userCommandMainMenu;
 
   do{
 
    interfaceMainMenu();
-   printf("Select what you want to do: ");
+   printf("(*)Select what you want to do: ");
    scanf("%d",&userCommandMainMenu);
 
    while (getchar() != '\n' && getchar() != EOF);
@@ -127,8 +121,6 @@ int main()
    case 3:{
    diliveryRequestSection(cities,vehiclesData,&sourse,&destination,&weight,distance,&diliveryCost,&estimatedTime,&fuelConsumpion,&fuelCost,&totalCost,
    &profit,&finalCost,diliveryRecords);
-   //Calculations( &sourse,&destination,&weight,&diliveryCost,&estimatedTime,&fuelConsumpion,&fuelCost,&totalCost,&profit,&finalCost,distance,vehiclesData,distances);
-   //recordDilivery(&sourse, &destination, &weight,&diliveryCost, &estimatedTime, &fuelConsumpion,&fuelCost, &totalCost, &profit, &finalCost,distance, vehiclesData, distances);
    }break;
 
    case 4:{
@@ -140,6 +132,7 @@ int main()
    printf("Exit Completed...\n");
    saveRoutesToFile();
    saveDiliveriesToFile();
+   printf("\t\t***\n");
 
    return 0;
 
@@ -155,3 +148,4 @@ int main()
 
     return 0;
 }
+
