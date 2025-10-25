@@ -52,6 +52,9 @@
 		<Unit filename="findingBestRoot.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="interfaceMainMenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
