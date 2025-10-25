@@ -1,0 +1,10 @@
+=== CITY LIST ====
+Total Cities: 2
+
+[1]Ambalangoda
+[2]Jaffna
+
+==== DISTANCE MATRIX(km) ====
+From\To     1      2 
+     1 0.00  479.00
+     2 479.000.00  

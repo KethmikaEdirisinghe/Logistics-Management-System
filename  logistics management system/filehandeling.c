@@ -109,7 +109,7 @@ void saveDiliveriesToFile(){
 
     }
     fclose(file);
-    printf("Diliveries save to dilivery.txt;");
+    printf("Diliveries save to dilivery.txt");
 
  }
 

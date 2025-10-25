@@ -128,11 +128,15 @@ int main()
    }break;
 
    case 5:{
-   printf("Thank You for Using our system.\n");
-   printf("Exit Completed...\n");
+   printf("------------------------------------------------------------------------------\n");
+   printf("\n\tThank You for Using our system.\n");
+   printf("\t...Exit Completed...\n");
+   printf("\n\t\t***\n");
+   printf("------------------------------------------------------------------------------\n");
    saveRoutesToFile();
    saveDiliveriesToFile();
-   printf("\t\t***\n");
+   printf("\n\t\t***\n");
+   printf("------------------------------------------------------------------------------\n");
 
    return 0;
 

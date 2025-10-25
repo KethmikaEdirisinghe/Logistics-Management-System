@@ -1,0 +1,18 @@
+	===DILIVERY HISTORY===
+Total Diliveries: 1
+
+-------------------------------------
+Record #1
+From City Index: 1
+To City Index: 2
+Distance: 479.00 km
+Vehicle Type: 1
+Package Weight: 150.00 kg
+Delivery Cost: 9723.70 LKR
+Fuel Consumption: 39.92 L
+Fuel Cost: 12374.17 LKR
+Total Cost: 22097.87 LKR
+Profit: 5524.47 LKR
+Final Cost: 27622.33 LKR
+Estimated Time: 7.98 hrs
+-------------------------------------

@@ -63,7 +63,7 @@ void diliveryRequestSection(
    int i;
    printf("\n--------------------------------------------\n");
    printf("\n");
-   printf("\n\t---Delivery Requesting Section---\n");
+   printf("\n\t---Delivery Requesting Section---\n\n");
    for(i=0;i<currentCityCount;i++){
        printf("%d. %s\n",i+1,cities[i]);
    }
@@ -78,13 +78,13 @@ void diliveryRequestSection(
    scanf("%d",destinationCity);
 
    if(*sourseCity == *destinationCity){
-       printf("Invalid Destionation Selection!");
+       printf("Invalid Destination Selection!");
      }
    }while(*sourseCity == *destinationCity);
 
    printf("\n|*|Your Package will be transfered from %s -------(to)-----> %s \n",cities[*sourseCity-1],cities[*destinationCity-1]);
 
-   printf("\n|*|Enter the weight of the package: ");
+   printf("\n|*|Enter the weight of the package(kg): ");
    scanf("%lf",packageWeight);
 
    vehicleManagement(vehiclesData,&userVehicle,vehicles);
